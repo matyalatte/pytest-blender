@@ -19,23 +19,23 @@ jobs:
         include:
           # Test in Windows
           - platform: windows-latest
-            pytest-version: '7.1.2'
+            pytest-version: '8.4.1'
             blender-version: '4.4.3'
             # Using 3.10 in Windows due to PIP encoding errors:
             # https://github.com/pypa/pip/issues/11066
             python-version: '3.10'
           - platform: windows-latest
-            pytest-version: '7.1.2'
+            pytest-version: '8.4.1'
             blender-version: '4.3.2'
             python-version: '3.10'
           # Latest Blender (Py311)
           - platform: ubuntu-latest
-            pytest-version: '7.2.0'
+            pytest-version: '8.4.1'
             blender-version: '4.4.3'
             python-version: '3.11'
           # Latest Blender (Py311)
           - platform: ubuntu-latest
-            pytest-version: '7.2.0'
+            pytest-version: '8.4.1'
             blender-version: '4.3.2'
             python-version: '3.11'
     steps:
