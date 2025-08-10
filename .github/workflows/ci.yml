@@ -20,7 +20,7 @@ jobs:
           # Test in Windows
           - platform: windows-latest
             pytest-version: '7.1.2'
-            blender-version: '3.1.2'
+            blender-version: '4.4.3'
             # Using 3.10 in Windows due to PIP encoding errors:
             # https://github.com/pypa/pip/issues/11066
             python-version: '3.10'
