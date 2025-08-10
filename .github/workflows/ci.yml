@@ -24,42 +24,20 @@ jobs:
             # Using 3.10 in Windows due to PIP encoding errors:
             # https://github.com/pypa/pip/issues/11066
             python-version: '3.10'
-          # Test previous Blender version
-          - platform: ubuntu-latest
+          - platform: windows-latest
             pytest-version: '7.1.2'
-            blender-version: '2.82'
-            python-version: '3.8'
-          # Test against Pytest v7
-          - platform: ubuntu-latest
-            pytest-version: '7.2.0'
-            blender-version: '3.1.1'
+            blender-version: '4.3.2'
             python-version: '3.10'
-          # Test against Pytest v6
-          - platform: ubuntu-latest
-            pytest-version: '6.2.5'
-            blender-version: '2.93.9'
-            python-version: '3.9'
           # Latest Blender (Py311)
           - platform: ubuntu-latest
             pytest-version: '7.2.0'
-            blender-version: '3.1.2'
+            blender-version: '4.4.3'
             python-version: '3.11'
-          # Latest Blender (Py312)
+          # Latest Blender (Py311)
           - platform: ubuntu-latest
-            pytest-version: '7.4.0'
-            blender-version: '3.1.2'
-            python-version: '3.12.1'
-          # MacOS temporally disabled because is execution is freezed for some reason
-          # Test in MacOS (Py39)
-          #- platform: macos-latest
-          #  pytest-version: '6.2.5'
-          #  blender-version: '2.93.9'
-          #  python-version: '3.9'
-          # Test in MacOS (Py310)
-          #- platform: macos-latest
-          #  pytest-version: '7.1.2'
-          #  blender-version: '3.1.2'
-          #  python-version: '3.10'
+            pytest-version: '7.2.0'
+            blender-version: '4.3.2'
+            python-version: '3.11'
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python v${{ matrix.python-version }}
